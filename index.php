@@ -48,35 +48,16 @@
       
       <div class="col-lg-12" style="margin-left: auto; margin-right:auto;">
                 <h1><?php echo date("l, d F, Y"); ?></h1>
+                <div style="float: left;">
+                  <img src="images/doctor24.jpg" alt="Doctor">
+                </div>
+      <p style="float:right; color:white;">
+        The application is going to have two interfaces, members interface and user interface.
+        The member’s interface will allow doctors to register themselves to the application and be candidate for answering people’s questions.
+        The visitor interface is the main interface of the application, from this interface, visitors can see the available doctors online, and can be able to select a doctor for their questions.
+        The can send questions simply by selecting doctor name, typing their name, phone number and the question, and then click send.
+        After clicking send button, the question will be listed on the screen.</p>
       </div>
-      <div class="myrow" style="margin: 0 center;">
-      
-        <!-- /.row -->
-            <div class="col-sm-3 col-xs-6">
-        
-                  <img src="images/doctor3.jpg" alt="Mohamed Kaba" class="img-thumbnail" "img-responsive portfolio-item">
-                  <h4>Doctor Mariame Camara</h4>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-        
-                  <img src="images/doctor1.jpg" alt="Mohamed Kaba" class="img-thumbnail">
-                  <h4>Doctor Alpha Oumar Diallo</h4>
-            </div>
-
-
-            <div class="col-sm-3 col-xs-6">
-        
-                  <img src="images/doctor2.jpg" alt="Mohamed Kaba" class="img-thumbnail">
-                  <h4>Doctor Elina Cisse Dore</h4>
-            </div>
-            <div class="col-sm-3 col-xs-6">
-        
-                  <img src="images/doctor24.jpg" alt="Mohamed Kaba" class="img-thumbnail">
-                  <h4>Doctor Idrissa</h4>
-            </div>
-
-    </div>
     </div>
     </div>
 </div>
@@ -89,9 +70,7 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            
-                            <ul>
-                            		<table class="table table-striped"> 
+                <table class="table table-striped"> 
 										<tr class="success" style="color:green; font-size:18px;">
 										<td><strong>Time</strong></td>
 										<td><strong>Sender Name</strong></td>
@@ -108,7 +87,7 @@
 									<?php endwhile; ?>
 
 									</table>		
-							</ul>
+
                         </div>
                     </div>
 

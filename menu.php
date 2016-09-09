@@ -51,17 +51,18 @@
                     <li>
                         <a href="index.php">Home</a>
                     </li>
-                    <li>
-                        <a href="about.php">About</a>
-                    </li>
-                    <li>
-                        <a href="contacts.php">Contacts</a>
-                    </li>
+                    
                      <li>
                         <a href="doctors.php">Registration</a>
                     </li>
                      <li>
                         <a href="cnx.php">Log in</a>
+                    </li>
+                    <li>
+                        <a href="about.php">About</a>
+                    </li>
+                    <li>
+                        <a href="contacts.php">Contacts</a>
                     </li>
                 </ul>
           <form class="navbar-form navbar-right">

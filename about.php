@@ -25,7 +25,7 @@
 </head>
 <body >
 <?php include("menu.php"); ?>
-<div class="well" style="margin: auto; margin-top:30px;" >
+<div class="well" style="margin: 50px;" >
 		<p>The application will be developed for doctors who are ready to provide online health consultation services to the Guineans for free of charge.</p>
 
 		<h2>The aims of the application:</h2>
