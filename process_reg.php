@@ -10,6 +10,7 @@ if(isset($_POST['submit'])){
 	$med_qualification = mysqli_real_escape_string($con, $_POST['mq']);
 	$email = mysqli_real_escape_string($con, $_POST['em']);
 	$ph = mysqli_real_escape_string($con, $_POST['ph']);
+	$at = mysqli_real_escape_string($con, $_POST['at']);
 	
 	//Set timezone
 	date_default_timezone_set('Africa/Conakry');
@@ -21,8 +22,8 @@ if(isset($_POST['submit'])){
 		header("Location: index.php?error=".urlencode($error));
 		exit();
 	} else {
-		$query = "INSERT INTO tbluser (user_name, password, full_name, medical_qualification,address, email, phone_number)
-				VALUES ('$user','$pass','$name','$med_qualification','$ad','$email','$ph')";
+		$query = "INSERT INTO tbluser (user_name, password, full_name, medical_qualification,address, email, phone_number,avalable_time)
+				VALUES ('$user','$pass','$name','$med_qualification','$ad','$email','$ph','$at')";
 		
 		if(!mysqli_query($con, $query)){
 			die('Error: '.mysqli_error($con));

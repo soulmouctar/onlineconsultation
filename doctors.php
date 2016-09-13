@@ -39,6 +39,10 @@
 	        <label for="inputPassword">Phone Number</label>
 	        <input type="number" class="form-control" id="inputPassword" name="ph" placeholder="Phone Number" required>
 	    </div>
+	     <div class="form-group">
+	        <label for="inputEmail">Avalaible Time</label>
+	        <input type="text" class="form-control" id="inputEmail"	name="at" placeholder="Avalaible Time" required>
+	    </div>
 	    <div class="checkbox">
 	        <label><input type="checkbox"> Remember me</label>
 	    </div>

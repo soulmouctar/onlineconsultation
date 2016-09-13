@@ -66,5 +66,8 @@
             });
         })
         </script>
+
+<p align="center"><?php include("footer.php"); ?></p>
+
   </body>
 </html>

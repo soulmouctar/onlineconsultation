@@ -25,7 +25,7 @@
 	    </fieldset>
 	</form>
 </div>
-
+<p align="center"><?php include("footer.php"); ?></p>
 
 </body>
 </html>

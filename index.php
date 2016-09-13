@@ -1,6 +1,7 @@
 <?php include 'database.php';
 	//Create Select Query
-	$query = "SELECT * FROM tblquestion ORDER BY id DESC";
+	// $query = "SELECT * FROM tblquestion ORDER BY id DESC";
+  $query = "SELECT * FROM tbluser ORDER BY id DESC";
 	$quz = mysqli_query($con, $query);
 ?>
 
@@ -17,7 +18,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Health Quz Application</title>
+    <title>Health Consultation</title>
 
     <!-- Bootstrap core CSS -->
     <link href="styles/bootstrap.css" rel="stylesheet">
@@ -67,22 +68,22 @@
             <div class="well">
 
                   <hr>
-
+                  <h1 align="centre">Avalaible doctors</h1>
                     <div class="row">
                         <div class="col-md-12">
                 <table class="table table-striped"> 
 										<tr class="success" style="color:green; font-size:18px;">
-										<td><strong>Time</strong></td>
-										<td><strong>Sender Name</strong></td>
-										<td><strong>Question Description</strong></td>
-										<td><strong>Doctor Name</strong></td>
+										<td><strong>Full Name</strong></td>
+										<td><strong>Avalaible time</strong></td>
+										<td><strong>Adress</strong></td>
+										<td><strong>Action</strong></td>
 										</tr>
 									<?php while($row = mysqli_fetch_assoc($quz)) : ?>																	
 										<tr>
-											<td><em><?php echo $row['time'] ?> </em></td>
-											<td><strong><?php echo $row['sender'] ?></strong></td>
-											<td><em> <?php echo $row['message'] ?></em></td>
-											<td></strong><?php echo $row['doctor'] ?></strong></td> 
+											<td><em><?php echo $row["full_name"] ?> </em></td>
+											<td><strong><?php echo $row["avalable_time"] ?></strong></td>
+											<td><em> <?php echo $row["address"] ?></em></td>
+											<td></strong><input type="submit" value="contact him" /></strong></td> 
 											</tr>																
 									<?php endwhile; ?>
 
@@ -100,9 +101,10 @@
 								<?php if(isset($_GET['error'])) : ?>
 								<div class="error"><?php echo $_GET['error']; ?></div>
 								<?php endif; ?>
-							<form method="post" action="process.php">
+
+							<form method="post" action="process.php" >
 										<input class="form-control" id="inputSuccess4" type="text" name="sender" placeholder="Enter Your Name" />
-										<input class="form-control" id="inputSuccess4" type="text" name="doctor" placeholder="Enter Doctor Name" /><br />
+										<input class="form-control" id="inputSuccess4" type="text" name="contact" placeholder="Enter your contact" /><br />
 										<textarea class="form-control" rows="3" type="textarea" name="message" placeholder="Enter A Message" /></textarea><br />
 										
 									<br />
@@ -137,6 +139,8 @@
     <script src="styles/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <p align="center"><?php include("footer.php"); ?></p>
   </body>
 </html>
 

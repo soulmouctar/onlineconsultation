@@ -23,9 +23,9 @@
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 </head>
-<body >
+<body class="jumbotron">
 <?php include("menu.php"); ?>
-<div class="well" style="margin: 50px;" >
+<div  style="margin: 50px;" >
 		<p>The application will be developed for doctors who are ready to provide online health consultation services to the Guineans for free of charge.</p>
 
 		<h2>The aims of the application:</h2>
@@ -48,8 +48,7 @@
 	
 </div>
 <br/><br/><br/><br/><br/><br/><br/><br/>
- <footer>
-        <p>&copy; 2016 Health Questions App, Guinea.</p>
-      </footer>
+<p align="center"><?php include("footer.php"); ?></p>
+
 </body>
 </html>

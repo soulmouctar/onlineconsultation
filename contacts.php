@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html >
 <head>
 	<title>About</title>
 	   <meta charset="utf-8">
@@ -23,10 +23,10 @@
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 </head>
-<body >
+<body class="jumbotron">
 <?php include("menu.php"); ?>
-<div class="well" style="margin: auto; margin-top:50px; color: black;">
-		<p style="font: 25px bold;">Thi application have been developed by :</p>
+<div style="color: black; margin-left:90px;"  >
+		<p>This application have been developed by :</p>
 
 		<h2>KABA Amara</h2>
 		<p>e-mail : <em>apkamarakaba@gmail.com</em></p>
@@ -43,7 +43,9 @@
 </div >
   <br/><br/><br/><br/><br/><br/><br/><br/>
    <footer >
-      <p>&copy; 2016 Health Questions App, Guinea.</p>
+      <!-- <p>&copy; 2016 Health Questions App, Guinea.</p> -->
     </footer>
+    <p align="center"><?php include("footer.php"); ?></p>
+
 </body>
 </html>

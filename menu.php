@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Health Quz Application</title>
+    <title>Health Consultation</title>
 
     <!-- Bootstrap core CSS -->
     <link href="styles/bootstrap.css" rel="stylesheet">
@@ -43,7 +43,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">eHealth <span class="text-success">Quz</span></a>
+          <a class="navbar-brand" href="#">Health Consultation</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
 
@@ -58,12 +58,7 @@
                      <li>
                         <a href="cnx.php">Log in</a>
                     </li>
-                    <li>
-                        <a href="about.php">About</a>
-                    </li>
-                    <li>
-                        <a href="contacts.php">Contacts</a>
-                    </li>
+                    
                 </ul>
           <form class="navbar-form navbar-right">
             <div class="form-group">
