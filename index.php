@@ -49,15 +49,16 @@
       
       <div class="col-lg-12" style="margin-left: auto; margin-right:auto;">
                 <h1><?php echo date("l, d F, Y"); ?></h1>
-                <div style="float: left;">
-                  <img src="images/doctor24.jpg" alt="Doctor">
-                </div>
-      <p style="float:right; color:white;">
-        The application is going to have two interfaces, members interface and user interface.
+                <p style="float:right; color:white;">
+        This web application have been developed for doctors who are ready to provide online health consultation services to the Guineans for free of charge.
         The member’s interface will allow doctors to register themselves to the application and be candidate for answering people’s questions.
-        The visitor interface is the main interface of the application, from this interface, visitors can see the available doctors online, and can be able to select a doctor for their questions.
-        The can send questions simply by selecting doctor name, typing their name, phone number and the question, and then click send.
-        After clicking send button, the question will be listed on the screen.</p>
+        The visitor interface is the main interface of the application, from this interface, visitors can see the available doctors, 
+        and can be able to select a doctor for their questions.
+        </p>
+                <div align="center">
+                  <img src="images/doctor2.jpg" alt="Doctor">
+                </div>
+      
       </div>
     </div>
     </div>
@@ -68,48 +69,47 @@
             <div class="well">
 
                   <hr>
-                  <h1 align="centre">Avalaible doctors</h1>
+                  <h1 align="center">Avalaible doctors</h1>
                     <div class="row">
-                        <div class="col-md-12">
-                <table class="table table-striped"> 
-										<tr class="success" style="color:green; font-size:18px;">
-										<td><strong>Full Name</strong></td>
-										<td><strong>Avalaible time</strong></td>
-										<td><strong>Adress</strong></td>
-										<td><strong>Action</strong></td>
-										</tr>
-									<?php while($row = mysqli_fetch_assoc($quz)) : ?>																	
-										<tr>
-											<td><em><?php echo $row["full_name"] ?> </em></td>
-											<td><strong><?php echo $row["avalable_time"] ?></strong></td>
-											<td><em> <?php echo $row["address"] ?></em></td>
-											<td></strong><input type="submit" value="contact him" /></strong></td> 
-											</tr>																
-									<?php endwhile; ?>
-
-									</table>		
-
-                        </div>
+                 
+                    <table class="table table-striped"> 
+    										<tr class="success" style="color:green; font-size:18px;">
+    										<td><strong>Full Name</strong></td>
+    										<td><strong>Avalaible time</strong></td>
+    										<td><strong>Adress</strong></td>
+    										<td><strong>Action</strong></td>
+    										</tr>
+    									<?php while($row = mysqli_fetch_assoc($quz)) : ?>																	
+    										<tr>
+    											<td><em><?php echo $row["full_name"] ?> </em></td>
+    											<td><strong><?php echo $row["avalable_time"] ?></strong></td>
+    											<td><em> <?php echo $row["address"] ?></em></td>
+    											<td></strong> <span id="contact"><input class="btn btn-success" type="submit" value="contact him" name="contactd"/></span></strong></td> 
+    											</tr>
+                  											
+    									<?php endwhile; ?>
+             
+    									</table>
+                  
                     </div>
 
-                    <hr>
-
+                    </div>
+               <form method="post" action="process.php" style="display:none;" id="replay">
+                    <input class="form-control" id="inputSuccess4" type="text" name="sender" placeholder="Enter Your Name" />
+                    <input class="form-control" id="inputSuccess4" type="text" name="contact" placeholder="Enter your contact: email or your Phone number" /><br />
+                    <textarea class="form-control" rows="3" type="textarea" name="message" placeholder="Enter A Message" /></textarea><br />
+                    <br/>
+                    <input class="btn btn-success" type="submit" name="submit" value="Send" />
+               </form> 
+                    <!--
                     <div class="row">
                         <div class="col-md-12">
                             
                             <div id="input">
-								<?php if(isset($_GET['error'])) : ?>
-								<div class="error"><?php echo $_GET['error']; ?></div>
-								<?php endif; ?>
-
-							<form method="post" action="process.php" >
-										<input class="form-control" id="inputSuccess4" type="text" name="sender" placeholder="Enter Your Name" />
-										<input class="form-control" id="inputSuccess4" type="text" name="contact" placeholder="Enter your contact" /><br />
-										<textarea class="form-control" rows="3" type="textarea" name="message" placeholder="Enter A Message" /></textarea><br />
-										
-									<br />
-									<input class="btn btn-success" type="submit" name="submit" value="Send" />
-							</form>
+								<?php //if(isset($_GET['error'])) : ?>
+								    <div class="error"><?php //echo $_GET['error']; ?></div>
+								<?php //endif; ?> -->
+       
 			         </div>
                      </div>
                     </div>
@@ -125,22 +125,21 @@
 
       <hr>
 
-      <footer>
-        <p>&copy; 2016 Health Questions App, Guinea.</p>
-      </footer>
     </div> <!-- /container -->
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="styles/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-
     <p align="center"><?php include("footer.php"); ?></p>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+
+      $('#contact').click(function(){
+        $('#replay').slideToggle();       
+      });
+
+    });
+
+    </script>
   </body>
 </html>
 

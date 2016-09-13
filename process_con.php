@@ -25,6 +25,6 @@
 				        header('refresh:2;url=cnx.php');
 			        }
 	        }
-	         
+	        
          }
 ?>

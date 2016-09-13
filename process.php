@@ -5,7 +5,7 @@ include 'database.php';
 if(isset($_POST['submit'])){
 	$sender = mysqli_real_escape_string($con, $_POST['sender']);
 	$message = mysqli_real_escape_string($con, $_POST['message']);
-	$doctor = mysqli_real_escape_string($con, $_POST['doctor']);
+	$contact = mysqli_real_escape_string($con, $_POST['contact']);
 	
 	//Set timezone
 	date_default_timezone_set('Africa/Conakry');
@@ -17,8 +17,8 @@ if(isset($_POST['submit'])){
 		header("Location: index.php?error=".urlencode($error));
 		exit();
 	} else {
-		$query = "INSERT INTO tblquestion (sender, message, doctor, time)
-				VALUES ('$sender','$message','$doctor','$time')";
+		$query = "INSERT INTO tblquestion (sender, message, contact, time)
+				VALUES ('$sender','$message','$contact','$time')";
 		
 		if(!mysqli_query($con, $query)){
 			die('Error: '.mysqli_error($con));
