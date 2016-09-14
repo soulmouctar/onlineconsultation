@@ -84,7 +84,7 @@
     											<td><em><?php echo $row["full_name"] ?> </em></td>
     											<td><strong><?php echo $row["avalable_time"] ?></strong></td>
     											<td><em> <?php echo $row["address"] ?></em></td>
-    											<td></strong> <span id="contact"><input class="btn btn-success" type="submit" value="contact him" name="contactd"/></span></strong></td> 
+    											<td></strong> <span class="contact"><input class="btn btn-success" type="submit" value="contact him" name="contactd"/></span></strong></td> 
     											</tr>
                   											
     									<?php endwhile; ?>
@@ -95,9 +95,9 @@
 
                     </div>
                <form method="post" action="process.php" style="display:none;" id="replay">
-                    <input class="form-control" id="inputSuccess4" type="text" name="sender" placeholder="Enter Your Name" />
-                    <input class="form-control" id="inputSuccess4" type="text" name="contact" placeholder="Enter your contact: email or your Phone number" /><br />
-                    <textarea class="form-control" rows="3" type="textarea" name="message" placeholder="Enter A Message" /></textarea><br />
+                    <input class="form-control" id="inputSuccess4" type="text" name="sender" placeholder="Enter Your Name" required/>
+                    <input class="form-control" id="inputSuccess4" type="text" name="contact" placeholder="Enter your contact: email or your Phone number" required /><br />
+                    <textarea class="form-control" rows="3" type="textarea" name="message" placeholder="Enter A Message" required /></textarea><br />
                     <br/>
                     <input class="btn btn-success" type="submit" name="submit" value="Send" />
                </form> 
@@ -133,7 +133,7 @@
     <script type="text/javascript">
     $(function(){
 
-      $('#contact').click(function(){
+      $('.contact').click(function(){
         $('#replay').slideToggle();       
       });
 

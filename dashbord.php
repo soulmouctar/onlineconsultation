@@ -16,7 +16,7 @@
     	<ul style="color:white;font-size:20px; font-style:bold;">
           <li tabindex="0" class="icon-dashboard"><span>Dashboard</span></li>
          
-          <li tabindex="0" class="icon-settings"><span>Log-out</span></li>
+          <li tabindex="0" class="icon-settings"><span><a style="color: white;" href="index.php">Log-out</a></span></li>
       </ul>
     </nav>
 
