@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Serveur: localhost
--- Généré le : Ven 09 Septembre 2016 à 15:13
+-- Généré le : Mer 14 Septembre 2016 à 07:43
 -- Version du serveur: 5.5.8
 -- Version de PHP: 5.3.5
 
@@ -30,17 +30,17 @@ CREATE TABLE IF NOT EXISTS `tblquestion` (
   `time` time NOT NULL,
   `sender` text NOT NULL,
   `message` text NOT NULL,
-  `doctor` varchar(50) NOT NULL,
+  `contact` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Contenu de la table `tblquestion`
 --
 
-INSERT INTO `tblquestion` (`id`, `time`, `sender`, `message`, `doctor`) VALUES
-(1, '03:23:44', 'DIallo Soulmouctar', 'Hello, I''m sick today, can you help e please??', 'Alpha Saliou'),
-(2, '03:27:30', 'kaba', 'i need the medecine for malaria', 'oumar');
+INSERT INTO `tblquestion` (`id`, `time`, `sender`, `message`, `contact`) VALUES
+(6, '10:47:22', 'DIallo Soulmouctar', 'Hello I have the headaches......', '621443322'),
+(7, '10:48:37', 'Usmane Doukoure', 'Good evening, Have you some advices for me? I''m....', 'dukuly@uba.com');
 
 -- --------------------------------------------------------
 
@@ -93,12 +93,14 @@ CREATE TABLE IF NOT EXISTS `tbluser` (
   `address` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `phone_number` int(15) NOT NULL,
+  `avalable_time` varchar(30) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Contenu de la table `tbluser`
 --
 
-INSERT INTO `tbluser` (`id`, `user_name`, `password`, `full_name`, `medical_qualification`, `address`, `email`, `phone_number`) VALUES
-(1, 'soulmouctar', '123', 'Diallo SM', 'Doctor', 'ENTA', 'soulmouctar@gmail.com', 2147483647);
+INSERT INTO `tbluser` (`id`, `user_name`, `password`, `full_name`, `medical_qualification`, `address`, `email`, `phone_number`, `avalable_time`) VALUES
+(1, 'soulmouctar', '123', 'Diallo SM', 'Doctor', 'ENTA', 'soulmouctar@gmail.com', 2147483647, '9pm to 10pm '),
+(3, 'alpha', 'alpha', 'Alpha Oumar Camara', 'Chemistry', 'Kosa', 'alpha22@gmail.com', 656554545, '7pm to 9pm');
